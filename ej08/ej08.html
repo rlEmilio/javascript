@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [];
+
+      function countBy(X, Y) {
+        if (X < 0 || Y < 0) {
+          array = [];
+        } else {
+          for (let i = 0; i < Y; i++) {
+            array[i] = X * (i+1);
+          }
+        }
+        alert(array);
+      }
+
+      countBy(10, 3);
+    </script>
+  </body>
+</html>

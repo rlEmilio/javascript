@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function valoresUnicos(array1, array2) {
+        //la funcion recibe dos arrays
+        let arrayFinal = []; //declaro mi array final
+
+        /*recorro el array1 y si el array2 NO INCLUYE el valor de array1 es porque no se repite,
+        por tanto agrego ese valor al array final*/
+        for (let i = 0; i < array1.length; i++) {
+          if (!array2.includes(array1[i])) {
+            arrayFinal.push(array1[i]);
+          }
+        }
+
+        /*repito lo mismo pero con el array2*/
+        for (let i = 0; i < array2.length; i++) {
+          if (!array1.includes(array2[i])) {
+            arrayFinal.push(array2[i]);
+          }
+        }
+
+        console.log(arrayFinal);
+      }
+
+      valoresUnicos(
+        ["Ray", "Jose", "Marcos", "Dani","Luis"],
+        ["Emilio","pepe", "Dani", "Jose", "Ivan"]
+      );
+    </script>
+  </body>
+</html>
