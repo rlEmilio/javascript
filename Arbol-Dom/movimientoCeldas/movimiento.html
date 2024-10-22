@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="movimiento.js"></script>
+
+    <style>
+
+    body{
+        background-color: aquamarine;
+    }    
+
+    .contenido{
+            display: grid;
+            /*grid-template-rows: 2fr;*/
+            justify-content: center;
+            grid-gap: 10px;
+        }
+
+
+    .botones{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            
+            
+    }
+        
+        td{
+            background-color: white;
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    
+<div class="contenido">
+    <table>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+
+        </tbody>
+
+    </table>
+
+
+<div class="botones">
+    <button id="arriba">Arriba</button>
+    <button id="abajo">Abajo</button>
+    <button id="derecha">Derecha</button>
+    <button id="izquierda">Izquierda</button>
+</div>
+
+</div>
+
+
+
+</body>
+</html>
