@@ -11,16 +11,16 @@
 
       function countBy(X, Y) {
         if (X < 0 || Y < 0) {
-          array = [];
+          return array;
         } else {
           for (let i = 0; i < Y; i++) {
             array[i] = X * (i+1);
           }
         }
-        alert(array);
+        return(array);
       }
 
-      countBy(10, 3);
+      alert(countBy(10, 3));
     </script>
   </body>
 </html>

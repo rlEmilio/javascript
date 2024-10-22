@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+let colores =["grey","red","blue","green","yellow","black"];
+let coloresCoinciden=[];
+let palabrasMalas=[];
+function e15(res){
+
+    for(let i=0;i<res.length;i++){
+
+        if(colores.includes(res[i])){
+            coloresCoinciden.push(res[i]);
+
+        }else{
+            palabrasMalas.push(res[i]);
+        }
+    }
+
+   res = coloresCoinciden.concat(palabrasMalas);
+   return res;
+
+
+}
+        
+ console.log(e15(["red","árbol","bombilla","yellow","blue"]));
+      
+        
+      
+
+
+           
+        
+
+
+
+
+        
+        
+    </script>
+
+
+
+</body>
+</html>
