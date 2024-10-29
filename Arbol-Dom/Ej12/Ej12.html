@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Ej12.js"></script>
+
+    <style>
+        img{
+            /* position: absolute; */
+            width: 400px;
+            height: 400px;
+
+        }
+
+        .contenedor{
+            display: grid;
+            justify-content: center;
+            grid-gap: 20px;
+           
+        }
+        .botones{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 50px;
+           
+           
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="contenedor">
+        <img src="img.jpeg" alt="">
+
+        <div class="botones">
+            <button id="izquierda">Izquierda</button>
+            <button id="derecha">Derecha</button>
+        </div>
+    </div>
+
+
+</body>
+</html>

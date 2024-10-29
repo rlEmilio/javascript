@@ -1,39 +1,26 @@
-
 window.onload = function () {
-    let referenciaTD = document.getElementsByTagName("td");  
-    //primero cargo la pagina y creo el atributo style para las celdas
-    let listaColores = ["red","black","blue","yellow"];
-    let contador=0;
+  let celdas = document.getElementsByTagName("td"); //array de td
+  //no se puede usar for each porque es específico de arrays, y esto devuelve una coleccion
 
-    
-    for (let celda of referenciaTD) {
-        celda.setAttribute("style", "background-color: white")
-        celda.onclick = function(){cambiarColor(this)}
-    }
-    
+  for (let element of celdas) {
+    //asignar color de fondo en linea
+    element.style.backgroundColor = "white";
+    element.contador = 0; //se crea una nueva propiedad contador para cada td;
+  }
+
+  cambiarColor(celdas);
+};
+
+function cambiarColor(celdas) {
+  let listaColores = ["red", "green", "blue", "yellow"];
+
+  for (let element of celdas) {
+    element.onclick = function () {
+      this.style.backgroundColor = listaColores[this.contador];
+      this.contador++;
+      if (this.contador == 4) {
+        this.contador = 0;
+      }
+    };
+  }
 }
-
-
-
-
-function cambiarColor(celda) {
-
-        celda.setAttribute("style", listaColores[contador]);
-        if(contador==3){
-            contador==0;
-        }
-        contador++;
-    
-        /*if(celda.getAttribute("style")=="background-color: white"){
-            console.log("hola estoy funcionando");
-            celda.setAttribute("style", "background-color: black");
-        }else{
-            celda.setAttribute("style", "background-color: white");
-        }*/
-        
-
-
-}
-
-
-

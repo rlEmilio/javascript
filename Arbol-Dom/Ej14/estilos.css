@@ -1,0 +1,16 @@
+ .contenido{
+    display: grid;
+    justify-content: center;
+    background-color: aqua;
+ }
+
+ .menu{
+    
+    list-style: disc;
+ }
+ 
+ .submenu{
+
+    list-style: circle;
+    
+}

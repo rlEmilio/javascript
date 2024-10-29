@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="ej09.js"></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <script>
+      function matriz() {
+        let n = 0;
+        let matriz = [];
+        do {
+          n = prompt("Dame un número enetero mayor a 2");
+        } while (n <= 2 || isNaN(n));
+
+        let fila = [];
+        for (let i = 1; i <= 9; i++) {
+          fila.push(i * n); //voy multiplicando y si la fila llega a 3, la agrego a la matriz y la reseteo
+          if (fila.length == 3) {
+            matriz.push(fila);
+            fila = [];
+          }
+        }
+
+        let salida = "";
+        for (let i = 0; i < matriz.length; i++) {
+          //mostrar salida con ceros si los numeros son menores a 10
+          for (let j = 0; j < matriz.length; j++) {
+            if (matriz[i][j] < 10) {
+              salida += "0" + matriz[i][j] + " ";
+            } else {
+              salida += matriz[i][j] + " ";
+            }
+          }
+          salida += "\n";
+        }
+
+        console.log(salida);
+      }
+
+      matriz();
+    </script>
+  </body>
 </html>
