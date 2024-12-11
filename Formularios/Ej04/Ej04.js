@@ -1,44 +1,37 @@
-window.onload = function () {
 
+
+window.onload = function () {
+ 
     let formulario = document.formulario;
     //console.log(formulario);
-    let botonDolares = formulario.elements[2];
-    //console.log(boton);
-    let botonEuros = formulario.elements[3];
-
-    botonDolares.addEventListener("click", convertirDolares);
-    botonEuros.addEventListener("click", convertirEuros);
+    let boton = formulario.elements["boton"];
+    boton.addEventListener("click", function(){
+        convertir(formulario);
+    } );
+  
 
 }
 
 
 //funcion que le añado al event listener.
-function convertirDolares() {
+function convertir(formulario) {
 
+    console.log("hola");
     let cantidad = formulario.elements[0];
     let conversion = formulario.elements[1];
     let cifra = parseFloat(cantidad.value);
+    let divisa = formulario.elements["divisa"];
 
     if (isNaN(cifra) || cifra <= 0) {
         alert("Por favor, introduce un número válido");
     } else {
-        conversion.value = (cifra * 1.17).toFixed(2) + "$";
+        if(divisa.value=="euro"){
+            conversion.value = (cifra*0.84).toFixed(2)+"€";
+        }else{
+            conversion.value = (cifra*1.17).toFixed(2)+"$";
+        }
     }
 
-
-}
-
-function convertirEuros() {
-
-  
-    let cantidad = formulario.elements[0];
-    let conversion = formulario.elements[1];
-    let cifra = parseFloat(cantidad.value);
-    if (isNaN(cifra) || cifra <= 0) {
-        alert("Por favor, introduce un número válido");
-    } else {
-        conversion.value = (cifra * 0.83).toFixed(2) + "€";
-    }
 
 }
 

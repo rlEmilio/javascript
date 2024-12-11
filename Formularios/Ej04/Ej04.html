@@ -17,8 +17,12 @@ conversión contraria (de euros a dólares).-->
     <form action="" method="post" name="formulario">
         <input type="text" name="cantidad">
         <input type="text" name="conversion" disabled>
-         <input type="button" name="boton" value="Convertir a dólares"> 
-         <input type="button" name="boton" value="Convertir a euros"> 
+        <select name="divisa" id="">
+            <option value="euro" selected>Euro</option>
+            <option value="dolar">Dolar</option>
+        </select>
+         <input type="button" name="boton" value="Convertir"> 
+          
 
         
     </form>

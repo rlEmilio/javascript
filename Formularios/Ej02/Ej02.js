@@ -1,18 +1,11 @@
 window.onload = function(){
 
-    //traigo campos de texto
-    let formu = document.formulario;
-   
-    texto1 = formu.elements[0];
-    texto2 = formu.elements[1];
-   
-    texto1.oninput = function(){
-        texto2.value = texto1.value;
+//traigo el formulario y los textos
+let formu = document.form;   //cuidao que aqui form es el name del formulario
+console.log(formu)
 
-
-
-    }
-
+let texto1 = formu.elements["texto1"];
+let texto2 = formu.elements["texto2"];
 
 
 }
