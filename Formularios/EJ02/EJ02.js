@@ -7,5 +7,4 @@ console.log(formu)
 let texto1 = formu.elements["texto1"];
 let texto2 = formu.elements["texto2"];
 
-
 }

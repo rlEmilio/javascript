@@ -30,8 +30,7 @@ function comprobar(formulario) {
    let string_ordenado2 = letras2.join("");
    console.log(string_ordenado2);
   
-   
-    
+  
  }
   
 }

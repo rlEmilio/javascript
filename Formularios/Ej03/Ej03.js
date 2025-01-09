@@ -6,7 +6,6 @@ let checkboxes = document.querySelectorAll('form input[type="checkbox"]');
 let texto = formulario.elements["texto"];
 //let boton = formulario.elements["boton"];
 
-
     for (let element of checkboxes) {
         element.onchange = function(){
             if(element.checked==true){
@@ -15,15 +14,5 @@ let texto = formulario.elements["texto"];
                 texto.value = texto.value.replace(element.value+" ", "");
             }
         }
-       
-             
-        
     }
-
- 
-
-
-
-
-
 }
