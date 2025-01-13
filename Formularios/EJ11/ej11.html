@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <script src="ej11.js"></script>
-</head>
 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
+    <link rel="stylesheet" href="estilos.css">
 
-<body>
+    <style>
+      .container{
+        max-width: 500px;
+      }
+    </style>
+  </head>
 
-    <form action="ej11_2.html" method="post">
-    <label for="dni">DNI</label>
-    <input type="text" name="dni">
-    <br>
-    <label for="nombre">Nombre</label>
-    <input type="text" name="nombre">
-    <br>
-    <label for="apellido">Apellido</label>
-    <input type="text" name="apellido">
-    <br>
-    <label for="fecha">Fecha</label>
-    <input type="date" name="fecha">
-    <br>
-    <label for="web">Web</label>
-    <input type="text" name="web">
-    <br>
-    <label for="contrasena">Contraseña</label>
-    <input type="password" name="contrasena">
-    <br>
-    <label for="boton_resetear">Resetear</label>
-    <button name="boton_resetear">Resetear</button>
-    <br>
-    <label for="boton_enviar">Enviar</label>
-    <button name="boton_enviar">Enviar</button>
+  <body>
+    <div class="container mt-5">
+      <form action="ej11_2.html" method="get" name="formu">
+        <label for="dni" class="form-label">DNI</label>
+        <input class="form-control" type="text" name="dni" />
 
-</form>
+        <label for="nombre" class="form-label">Nombre</label>
+        <input class="form-control" type="text" name="nombre" />
 
-    
-</body>
+        <label for="apellido" class="form-label">Apellido</label>
+        <input class="form-control" type="text" name="apellido" />
+
+        <label for="fecha" class="form-label">Fecha</label>
+        <input class="form-control" type="text" name="fecha" />
+
+        <label for="web" class="form-label">Web</label>
+        <input class="form-control" type="text" name="web" />
+
+        <label for="contrasena" class="form-label">Contraseña</label>
+        <input class="form-control" type="password" name="contrasena" />
+
+        <label for="boton_resetear" class="form-label">Resetear</label>
+        <button class="form-control" name="boton_resetear">Resetear</button>
+
+        <label for="boton_enviar" class="form-label">Enviar</label>
+        <button class="form-control" name="boton_enviar">Enviar</button>
+      </form>
+    </div>
+  </body>
 </html>
