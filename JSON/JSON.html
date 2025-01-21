@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+<body>
+
+    <script>
+    let movil ={
+        "modelo": "sony",
+        "marca": "xr2",
+        "prestaciones":["pantalla amoled", "tamaño", "giroscopio"]
+          
+    };
+
+   
+    //console.log(Object.keys(movil)[2]);
+    for (const key in movil) {
+        if (typeof movil[key] != Array) {
+            console.log(movil[key]);
+        }
+       
+        
+    }
+
+    
+    </script>
+</body>
+</html>
