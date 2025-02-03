@@ -255,6 +255,9 @@ titulo.innerText = "Hay "+ library.length+" libros en la biblioteca";
             localStorage.clear();
             localStorage.setItem("Datos", JSON.stringify(libro));
 
+            
+          
+            
         
         })
     });
