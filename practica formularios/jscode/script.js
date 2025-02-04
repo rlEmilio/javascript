@@ -63,7 +63,7 @@ window.onload = function () {
     //VALIDACIONES PASO A PASO
     //cancelo submit del boton 
     let botonEnviar = document.querySelector("form input[value='Enviar']");
-    botonEnviar.addEventListener("click", function (event) {
+    botonEnviar.addEventListener("click", function(event) {
         event.preventDefault();
 
         // VALIDO NOMBRE

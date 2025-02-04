@@ -220,24 +220,26 @@ const library = [
     }
 ]
 
-window.onload = function(){
+window.onload = function () {
 
-//me traigo seccion.
-let seccion = document.getElementsByTagName("section")[0];
-//me traigo h1
-let titulo = document.getElementsByTagName("h1")[0];
-titulo.innerText = "Hay "+ library.length+" libros en la biblioteca";
+localStorage.clear();
+
+    //me traigo seccion.
+    let seccion = document.getElementsByTagName("section")[0];
+    //me traigo h1
+    let titulo = document.getElementsByTagName("h1")[0];
+    titulo.innerText = "Hay " + library.length + " libros en la biblioteca";
 
     library.forEach(libro => {
         //creo articulos por cada libro
-       let articulo = document.createElement("article");
-       //añado clase.
-       articulo.setAttribute("class","presentacion");
-       let etiqueta_titulo = document.createElement("h3");
+        let articulo = document.createElement("article");
+        //añado clase.
+        articulo.setAttribute("class", "presentacion");
+        let etiqueta_titulo = document.createElement("h3");
         //creo nodo texto del h3 con el titulo del libro
-       let titulo = document.createTextNode(libro.title);
-       let imagen = document.createElement("img");
-       imagen.src = libro.cover;
+        let titulo = document.createTextNode(libro.title);
+        let imagen = document.createElement("img");
+        imagen.src = libro.cover;
 
         //añado article y h3 al section
         etiqueta_titulo.appendChild(titulo);
@@ -247,18 +249,29 @@ titulo.innerText = "Hay "+ library.length+" libros en la biblioteca";
         //console.log(libro.title);
 
 
+        /*let res = "";
+        for (const key in libro) {
+            if (key != "author") {
+                res += `${key}: ${libro[key]}\n`;
+            }else{
+                res += `${key}: ${libro[key].name}\n`;
+            }
+        }
+        console.log(res);*/
+        localStorage.setItem("Libreria", library);
+
+
         //metodo para que me lleve a la pagina mostrar cuando pulso un libro concreto
-        imagen.addEventListener("click", function(){
+        imagen.addEventListener("click", function () {
             //redirijo a pagina mostrar
             window.location.href = "mostrar.html";
             //guardo datos en localStorage
-            localStorage.clear();
-            localStorage.setItem("Datos", JSON.stringify(libro));
 
-            
-          
-            
-        
+
+
+
+
+
         })
     });
 }
