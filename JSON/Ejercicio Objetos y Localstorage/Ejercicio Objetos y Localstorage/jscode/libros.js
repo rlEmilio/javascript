@@ -221,16 +221,23 @@ const library = [
 ]
 
 window.onload = function () {
-
-localStorage.clear();
+   
+        //subo libreria inicial
+        if(!localStorage.getItem("Libreria")){
+            localStorage.setItem("Libreria", JSON.stringify(library));
+        }
+    
+        let libreria = JSON.parse(localStorage.getItem("Libreria"));
+        //console.log(libreria);
+    
 
     //me traigo seccion.
     let seccion = document.getElementsByTagName("section")[0];
     //me traigo h1
     let titulo = document.getElementsByTagName("h1")[0];
-    titulo.innerText = "Hay " + library.length + " libros en la biblioteca";
+    titulo.innerText = "Hay " + libreria.length + " libros en la biblioteca";
 
-    library.forEach(libro => {
+    libreria.forEach(libro => {
         //creo articulos por cada libro
         let articulo = document.createElement("article");
         //añado clase.
@@ -249,23 +256,12 @@ localStorage.clear();
         //console.log(libro.title);
 
 
-        /*let res = "";
-        for (const key in libro) {
-            if (key != "author") {
-                res += `${key}: ${libro[key]}\n`;
-            }else{
-                res += `${key}: ${libro[key].name}\n`;
-            }
-        }
-        console.log(res);*/
-        localStorage.setItem("Libreria", library);
-
-
         //metodo para que me lleve a la pagina mostrar cuando pulso un libro concreto
         imagen.addEventListener("click", function () {
             //redirijo a pagina mostrar
             window.location.href = "mostrar.html";
             //guardo datos en localStorage
+            localStorage.setItem("Datos", JSON.stringify(libro));
 
 
 

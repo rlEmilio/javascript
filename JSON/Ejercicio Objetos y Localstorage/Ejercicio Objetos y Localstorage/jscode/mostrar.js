@@ -22,9 +22,13 @@ window.onload = function(){
       clave_dato.innerText = key;
 
       //saco solo el nombre del objeto autor
-      if (key=="author") {
+      //el primer caso es cuando subo el autor desde nuevo_libro (no es un objeto)
+      if (key=="author" && typeof key != Object) {
+        valor.innerText = datos[key];
+      }else if(key=="author"){
         valor.innerText = datos[key]["name"];
-      }else{
+      }
+      else{
         valor.innerText = datos[key];
       }
      
